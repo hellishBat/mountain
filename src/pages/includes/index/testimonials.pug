@@ -1,0 +1,16 @@
+<!-- Testimonials -->
+include ../mixins/mixins
+
+section#testimonials.testimonials.section 
+  .container
+    h2.testimonials__title.title
+      | Testimonials
+  .testimonials__slider.swiper-container.js-testimonials-slider
+    .testimonials__wrapper.swiper-wrapper
+      +testimonials_item("images/content/user-05.jpg", "Alexa Smith", "Alexa Smith", "It was my first time ever snowboarding, I was hesitant to pay for lessons but worth the money, Josh k was my instructor. I only paid for group lessons but lucked out I was the only one. Very personable and great customer service.")
+      +testimonials_item("images/content/user-06.jpg", "Jose Campos", "Jose Campos", "We chose this location to try for the first time our snowboarding. It was all worth it. Their learners or beginner loop is great enough to start off. At the end of many fall we learned how to snowboard. We will for sure come back into this location.")
+      +testimonials_item("images/content/user-07.jpg", "Tara Parker", "Tara Parker", "Don't know why I've never been here, despite skiing at most of the BC resorts. It's a fabulous mountain resort with so many different areas and extensive skiable terrain. With cold weather, top to bottom great skiing everywhere.")
+      +testimonials_item("images/content/user-08.jpg", "David Peterson", "David Peterson", "Really good snow I love the backside. Lines are not to bad. The new COVID-19 protocols kind of scared me and the lines. But to be honest I have had a really good experince!")
+      +testimonials_item("images/content/user-09.jpg", "Haley Morrison", "Haley Morrison", "We chose this location to try for the first time our snowboarding. It was all worth it. Their learners or beginner loop is great enough to start off. At the end of many fall we learned how to snowboard. We will for sure come back into this location.")
+    .testimonials__pagination.swiper-pagination.js-testimonials-pagination
+<!-- /Testimonials -->

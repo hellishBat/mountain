@@ -1,0 +1,37 @@
+//- Offers card
+mixin offers_card(offer_img, offer_caption, offers_title, offer_link, offer_price)
+  .offer__card
+    .offer__body.d-f.fd-c.ai-c
+      .offer__img(style= offer_img data-aos='zoom-in' data-aos-delay='0')
+      .offer__caption.item-caption= offer_caption
+      h3.offer__card-title.item-title= offers_title
+      a.offer__card__btn.btn.btn--sm(href= offer_link)
+        | From 
+        span.offer__currency $
+        span.offer__price= offer_price
+
+//- Crew item
+mixin crew_item(crew_link, crew_img, crew_img_alt, crew_position, crew_name)
+  a.crew__item.d-f.fd-c.ai-c(href= crew_link) 
+    .crew__pic.avatar(data-aos='zoom-in' data-aos-delay='0')
+      img.crew__img(src= crew_img, alt= crew_img_alt)
+    .crew__position.item-caption= crew_position 
+    h3.crew__name.item-title= crew_name
+
+//- Testimonials item
+mixin testimonials_item(testimonials_img, testimonials_img_alt, testimonials_name, testimonials_text)
+  .testimonials__item.swiper-slide
+    .container
+      .testimonials__body.d-f.fd-c.ai-c
+        .testimonials__pic.avatar
+          img.testimonials__img(src= testimonials_img, alt= testimonials_img_alt)
+        h4.testimonials__name= testimonials_name
+        p.testimonials__text.text= testimonials_text
+
+//- Social item
+mixin social_item(social_link, social_title, social_icon)
+  li.footer__social-item(data-aos='zoom-in' data-aos-delay='1500')
+    a.footer__social-link(href= social_link)
+      svg.footer__social-icon
+        title= social_title 
+        use(href= social_icon)

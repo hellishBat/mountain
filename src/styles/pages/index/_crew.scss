@@ -1,0 +1,65 @@
+// Crew
+.crew {
+  &__items {
+    justify-content: space-between;
+    margin: -1rem;
+  }
+
+  &__item {
+    padding: 1rem;
+    max-width: 15rem;
+    text-align: center;
+
+    @include respond(min-md) {
+      &:hover {
+        .crew__img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+
+  &__pic {
+    width: 13.334rem;
+    height: 13.334rem;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__img {
+    transition: transform 0.5s $transition-style 0s;
+  }
+
+  &__position {
+    padding-top: 1.8em;
+  }
+
+  @include respond(max-md) {
+    &__items {
+      justify-content: center;
+    }
+
+    &__item {
+      flex-basis: 40%;
+      max-width: none;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @include respond(max-sm) {
+    &__pic {
+      width: 10rem;
+      height: 10rem;
+    }
+  }
+
+  @include respond(max-xs) {
+    &__item {
+      flex-basis: 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

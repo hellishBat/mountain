@@ -1,0 +1,80 @@
+// Testimonials
+.testimonials {
+  &__title {
+    margin: 0 0 0.7em;
+  }
+
+  &__pic {
+    position: relative;
+    width: 7.222rem;
+    height: 7.222rem;
+    margin-bottom: 0.88rem;
+
+    &:before,
+    &:after {
+      position: absolute;
+      bottom: -0.722rem;
+      z-index: 4;
+      display: block;
+      width: 50px;
+      height: 50px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      content: "";
+    }
+
+    &:before {
+      left: -0.5rem;
+      background-image: url("/images/ui/quote-left.png");
+      transform: translateX(-100%);
+    }
+
+    &::after {
+      right: -0.5rem;
+      background-image: url("/images/ui/quote-right.png");
+      transform: translateX(100%);
+    }
+  }
+
+  &__name {
+    margin: 0;
+    padding-bottom: 1.444rem;
+    font-family: $catamaran;
+    font-weight: 900;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 45.12rem;
+    margin: 0 0 2.222rem;
+    text-align: center;
+  }
+
+  &__pagination {
+    position: static;
+
+    &.swiper-pagination-bullets .swiper-pagination-bullet {
+      margin: 0 6.5px;
+      width: 13px;
+      height: 13px;
+      opacity: 1;
+    }
+
+    & .swiper-pagination-bullet {
+      background-color: $light-gray;
+      transition: all 0.3s $transition-style 0s;
+    }
+
+    & .swiper-pagination-bullet:hover {
+      opacity: 0.4;
+    }
+
+    & .swiper-pagination-bullet-active {
+      background-color: $primary-accent;
+    }
+  }
+}
+
+

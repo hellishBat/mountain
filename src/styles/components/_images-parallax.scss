@@ -1,0 +1,76 @@
+// Images parallax
+.images-parallax {
+  position: absolute;
+  width: 110%;
+  height: 110%;
+  bottom: -5%;
+  left: -5%;
+  z-index: 1;
+  pointer-events: none;
+
+  &__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  &__scene {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    will-change: transform;
+    pointer-events: none;
+
+    &--mountains {
+      top: 38.5%;
+      height: 71%;
+    }
+
+    &--snow {
+      top: 70%;
+      height: 30%;
+    }
+
+    &--human {
+      top: -10%;
+      height: 100%;
+    }
+  }
+
+  &__scene-img {
+    width: 100%;
+    height: 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &--snow {
+      background-position: left 30% top 50%;
+    }
+  }
+
+  @include respond(max-lg) {
+    &__scene {
+      &--human {
+        top: 17%;
+      }
+    }
+
+    &__scene-img {
+      &--human {
+        background-position: right 20% top 0%;
+      }
+    }
+  }
+
+  @include respond(max-xs) {
+    &__scene-img {
+      &--human {
+        background-position: right 30% top 10%;
+      }
+    }
+  }
+}

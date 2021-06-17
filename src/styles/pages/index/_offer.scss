@@ -1,0 +1,65 @@
+// Offer
+.offer {
+  &__title {
+    margin: 0 0 0.3em;
+  }
+
+  &__text {
+    max-width: 55.5rem;
+    margin: 0 auto 3.9rem;
+    text-align: center;
+  }
+
+  &__cards {
+    justify-content: space-between;
+    margin: -1rem;
+  }
+
+  &__card {
+    padding: 1rem;
+    width: calc(100% / 3);
+    text-align: center;
+  }
+
+  &__img {
+    width: 10.333rem;
+    height: 10.333rem;
+    margin-bottom: 2rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  &__card-title {
+    max-width: 13rem;
+    margin: 0 0 1em;
+  }
+
+  @include respond(max-sm) {
+    &__cards {
+      justify-content: flex-start;
+    }
+
+    &__card {
+      width: calc(100% / 2);
+
+      &:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &__card-title {
+      font-size: 1.2rem;
+    }
+  }
+
+  @include respond(max-xs) {
+    &__cards {
+      justify-content: center;
+    }
+
+    &__card {
+      width: 100%;
+    }
+  }
+}

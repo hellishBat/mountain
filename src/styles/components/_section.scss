@@ -1,0 +1,16 @@
+// Section
+.section {
+  padding: 7.778rem 0 9rem;
+
+  @include respond(max-md) {
+    & {
+      padding: 6rem 0;
+    }
+  }
+
+  @include respond(max-sm) {
+    & {
+      padding: 5rem 0;
+    }
+  }
+}

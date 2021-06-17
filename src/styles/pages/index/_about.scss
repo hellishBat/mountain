@@ -1,0 +1,124 @@
+// About
+.about {
+  padding-top: 16%;
+  min-height: 100vh;
+  min-height: var(--dynamic-vh);
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__inner {
+    max-width: 45.12rem;
+  }
+
+  &__title {
+    max-width: 37rem;
+    margin: 0 0 0.5em;
+    text-align: left;
+  }
+
+  &__body {
+    margin-bottom: 3.2rem;
+  }
+
+  &__text-container:not(:last-child) {
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+
+  &__text {
+    margin: 0;
+    color: $dark-gray;
+  }
+
+  &__item {
+    flex-direction: column;
+    min-width: 19%;
+    letter-spacing: 0.01em;
+
+    &:not(:last-child) {
+      margin-right: 13%;
+    }
+  }
+
+  &__number {
+    font-family: $catamaran;
+    font-size: 3.556rem;
+    line-height: 1;
+    font-weight: 900;
+    color: $primary-accent;
+  }
+
+  &__label {
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  @include respond(max-lg) {
+    & {
+      min-height: 100%;
+      background-position: right 30% top 0;
+    }
+
+    &__inner {
+      max-width: 65%;
+    }
+
+    &__stats {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      width: calc((100% / 2) - 2rem);
+
+      &:not(:last-child) {
+        margin: 0 2rem 2rem 0;
+      }
+    }
+  }
+
+  @include respond(max-md) {
+    & {
+      min-height: 100%;
+    }
+
+    &__title {
+      margin-bottom: 0.7em;
+    }
+  }
+
+  @include respond(max-md-ls) {
+    &__inner {
+      max-width: 65%;
+    }
+  }
+
+  @include respond(max-sm) {
+    & {
+      background-position: left;
+    }
+
+    &__inner {
+      max-width: none;
+    }
+
+    &,
+    &__title {
+      text-align: center;
+    }
+
+    &__stats {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__item {
+      justify-content: center;
+
+      &:not(:last-child) {
+        margin: 0 0 2rem;
+      }
+    }
+  }
+}

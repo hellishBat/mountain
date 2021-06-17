@@ -1,0 +1,43 @@
+<!-- Footer -->
+include ../includes/mixins/mixins
+
+footer#contacts.footer
+  .footer__row.d-f
+    .footer__col
+      .container
+        .footer__contacts.d-f.fd-c
+          h2.footer__title.title(data-aos='fade-up' data-aos-delay='0')
+            | Contact us
+          address.footer__address 
+            ul.footer__list 
+              li.footer__item.d-f(data-aos='fade-up' data-aos-delay='300')
+                svg.footer__link-icon
+                  use(href='images/sprite.svg#tel')
+                a.footer__link(href="tel:+43662123456")
+                  | +43 662 123456
+              li.footer__item.d-f(data-aos='fade-up' data-aos-delay='600')
+                svg.footer__link-icon
+                  use(href='images/sprite.svg#map-marker')
+                a.footer__link(href="https://goo.gl/maps/8dcLMm7RfCoy9DFcA" target="_blank")
+                  | Gabelsbergerstraße 26, 5020 Salzburg, Austria
+              li.footer__item.d-f(data-aos='fade-up' data-aos-delay='900')
+                svg.footer__link-icon
+                  use(href='images/sprite.svg#mail')
+                a.footer__link(href="#")
+                  | inbox@mountain.com
+              li.footer__item.d-f(data-aos='fade-up' data-aos-delay='1200')
+                svg.footer__link-icon
+                  use(href='images/sprite.svg#hours')
+                span.footer__work-details.d-f.fd-c
+                  span.footer__hours
+                    | Open Hours: 8.00 AM - 10.00 PM
+                  span.footer__days
+                    | Monday - Sunday
+
+          .footer__social
+            ul.footer__social-list.d-f
+              +social_item('#', 'Twitter', 'images/sprite.svg#social-twitter')
+              +social_item('#', 'Facebook', 'images/sprite.svg#social-facebook')
+              +social_item('#', 'Instagram', 'images/sprite.svg#social-instagram')
+    .footer__map.js-contacts-map
+<!-- /Footer -->

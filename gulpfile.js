@@ -52,7 +52,7 @@ const path = {
   },
   resources: {
     src: './src/resources/**',
-    dist: './dist',
+    dist: './dist/resources',
     watch: './src/resources/**',
   },
   fonts: {

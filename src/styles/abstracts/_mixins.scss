@@ -1,3 +1,4 @@
+// Media, min-width
 @mixin respond($breakpoint) {
   @if $breakpoint==min-xs {
     @media only screen and (min-width: $media-xs+px) {
@@ -23,6 +24,19 @@
     }
   }
 
+  @if $breakpoint==min-xl {
+    @media only screen and (min-width: $media-xl+px) {
+      @content;
+    }
+  }
+
+  // Media, max-width
+  @if $breakpoint==max-xl {
+    @media only screen and (max-width: $media-xl+px) {
+      @content;
+    }
+  }
+
   @if $breakpoint==max-lg {
     @media only screen and (max-width: $media-lg+px) {
       @content;
@@ -31,6 +45,12 @@
 
   @if $breakpoint==max-md {
     @media only screen and (max-width: $media-md+px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint==max-md-ls {
+    @media only screen and (max-width: $media-md+px) and (orientation: landscape) {
       @content;
     }
   }
@@ -48,6 +68,7 @@
   }
 }
 
+// Connect fonts to project
 @mixin font-face($font-family, $url, $weight) {
   @font-face {
     font-family: "#{$font-family}";
@@ -58,31 +79,4 @@
     font-display: swap;
     font-style: normal;
   }
-}
-
-@mixin font-size($font-size, $line-height: normal, $letter-spacing: normal) {
-  font-size: $font-size * 1px;
-  // font-size: $font-size * 0.1rem;
-  // example using rem values and 62.5% font-size so 1rem = 10px
-
-  @if $line-height==normal {
-    line-height: normal;
-  }
-
-  @else {
-    line-height: $line-height;
-  }
-
-  @if $letter-spacing==normal {
-    letter-spacing: normal;
-  }
-
-  @else {
-    letter-spacing: $letter-spacing;
-  }
-}
-
-@mixin flexbox() {
-  display: flex;
-  font-size: 0;
 }

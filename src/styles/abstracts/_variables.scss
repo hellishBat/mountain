@@ -1,17 +1,38 @@
 // Container properties
-$cont-width: 1140;
 $min-width: 320px;
-$max-width: $cont-width + 30;
+$cont-width: 1260;
+$cont-width-wide: 1680;
+$max-width: $cont-width+30;
+$max-width-wide: $cont-width-wide+30;
 
 // Media breakpoints
-$media-lg: 1199.98;
+$media-xl: $max-width-wide;
+$media-lg: $max-width;
 $media-md: 991.98;
 $media-sm: 767.98;
 $media-xs: 575.98;
 
 // Fonts
-$default-font: sans-serif;
+$muli: 'Muli',
+sans-serif;
+$catamaran: 'Catamaran',
+sans-serif;
+$default-font: $muli;
 
 // Colours
 $white: #ffffff;
-$primary-accent: blue;
+$primary-white: #f6f6f6;
+$secondary-white: #fefefe;
+$light-gray: #cdd4db;
+$gray: #565656;
+$dark-gray: #2b2b2b;
+$graphite: #333333;
+$black: #000000;
+$primary-accent: #ff690f;
+$secondary-accent: #355B8C;
+$hover-accent: lighten($primary-accent, 20%);
+$hover-text: darken($primary-accent, 20%);
+$header-gradient: linear-gradient(90deg, rgba(53,91,140,1) 0%, rgba(78,132,166,1) 100%);
+
+// Animations
+$transition-style: ease;

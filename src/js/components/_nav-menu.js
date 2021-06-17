@@ -1,4 +1,6 @@
 // Nav menu
+"use strict"
+
 let navBtn = document.querySelector('.js-nav-btn');
 let navMenu = document.querySelector('.js-nav-menu');
 let navLinks = document.querySelectorAll('.header__link');

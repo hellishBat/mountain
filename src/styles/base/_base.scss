@@ -1,3 +1,35 @@
+:root {
+  font-size: 18px;
+  --dynamic-vh: 100vh;
+  --swiper-theme-color: #ff660d;
+  --container-mxw: 1710px;
+
+  @include respond(max-xl) {
+    & {
+      font-size: 16px;
+      --container-mxw: 1290px;
+    }
+  }
+
+  @include respond(max-lg) {
+    & {
+      --container-mxw: 970px;
+    }
+  }
+
+  @include respond(max-md) {
+    & {
+      --container-mxw: 750px;
+    }
+  }
+
+  @include respond(max-sm) {
+    & {
+      --container-mxw: 570px;
+    }
+  }
+}
+
 html,
 *,
 *::before,
@@ -17,9 +49,11 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  background-color: $white;
+  background-color: $primary-white;
   font-family: $default-font;
-  line-height: 1.2;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $graphite;
   overflow-x: hidden;
 
   @include respond(max-md) {
@@ -27,10 +61,6 @@ body {
       overflow: hidden;
     }
   }
-}
-
-main {
-  flex: 1 0 auto;
 }
 
 ul,
@@ -51,4 +81,5 @@ svg {
 
 ::selection {
   background-color: $primary-accent;
+  color: $white;
 }

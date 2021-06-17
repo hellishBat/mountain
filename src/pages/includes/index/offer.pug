@@ -1,0 +1,14 @@
+<!-- Offer -->
+include ../mixins/mixins
+
+section#offer.offer.section 
+  .container 
+    h2.offer__title.title(data-aos='fade-up' data-aos-delay='0')
+      | What we offer
+    p.offer__text.text(data-aos='fade-up' data-aos-delay='400')
+      | Skiing and snowboarding still rank among the undisputed winter sport highlights for all ages and ability levels. The perfectly groomed ski slopes makes a real heaven for skiers and riders. Our professional ski and snowboard instructors can show you all the little details while improving your skiing techniques and riding skills.
+    .offer__cards.d-f.fxw-w
+      +offers_card('background-image: url(images/bg/offer-01.png);', 'New to skiing?', 'Private lessons for beginners', '#', '250')
+      +offers_card('background-image: url(images/bg/offer-02.png);', 'Need a crew?', 'Group lessons for beginners', '#', '150')
+      +offers_card('background-image: url(images/bg/offer-03.png);', 'Wanna more?', 'Advanced group lessons', '#', '450')
+<!-- /Offer -->

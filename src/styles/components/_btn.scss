@@ -1,15 +1,46 @@
 // Button
 .btn {
   display: inline-block;
-  text-align: center;
-  font-size: inherit;
-  line-height: 1;
   border: none;
-  background-color: transparent;
+  border-radius: 0.333rem;
+  background-color: $primary-accent;
+  font-family: $catamaran;
+  font-size: inherit;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $secondary-white;
   outline: transparent;
   cursor: pointer;
   white-space: nowrap;
-  transition-property: box-shadow, background-color, color;
-  transition-duration: 0.3s;
-  transition-timing-function: ease;
+  transition: all 0.3s $transition-style 0s;
+
+  &--sm {
+    padding: 1.2em 1.5em 1.15em;
+    font-size: 0.833rem;
+  }
+
+  &--lg {
+    padding: 1.167em 2.528em;
+  }
+
+  @include respond(min-md) {
+    &:focus {
+      box-shadow: 0 0 0 3px rgba($primary-accent, 0.5);
+    }
+
+    &:hover {
+      background-color: $hover-accent;
+      color: $hover-text;
+    }
+
+    &:active {
+      box-shadow: inset 0px 3px 4px rgba($black, 0.15);
+    }
+  }
+
+  @include respond(max-md) {
+    
+  }
 }

@@ -13,10 +13,23 @@
 // Components
 @import "components/logo";
 @import "components/btn";
+@import "components/images-parallax";
+@import "components/section";
+@import "components/avatar";
 
 // Layout-related sections
 @import "common/header";
 @import "common/footer";
 
 // Page-specific styles
-@import "pages/index/index";
+@import "pages/index/hero";
+@import "pages/index/offer";
+@import "pages/index/gallery";
+@import "pages/index/about";
+@import "pages/index/crew";
+@import "pages/index/testimonials";
+
+
+
+
+

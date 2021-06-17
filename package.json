@@ -53,6 +53,11 @@
     "yargs": "^16.2.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "@googlemaps/js-api-loader": "^1.11.4",
+    "animejs": "^3.2.1",
+    "aos": "^2.3.4",
+    "baguettebox.js": "^1.11.1",
+    "normalize.css": "^8.0.1",
+    "swiper": "^6.7.0"
   }
 }

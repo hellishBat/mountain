@@ -1,1 +1,136 @@
 // Footer
+.footer {
+  position: relative;
+  z-index: 3;
+  background-color: $graphite;
+  color: $primary-white;
+
+  &__col {
+    padding: 5.556rem 1rem;
+    padding-left: calc((100% - var(--container-mxw)) / 2);
+    flex: 0 33.3%;
+    overflow: hidden;
+  }
+
+  &__title {
+    text-align: left;
+    color: $white;
+  }
+
+  &__address {
+    width: 100%;
+    max-width: 20rem;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    font-style: normal;
+    line-height: 1.44em;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 1.889rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1em;
+    }
+  }
+
+  &__link,
+  &__social-link {
+    transition: color 0.3s $transition-style 0s;
+
+    @include respond(min-md) {
+      &:hover {
+        color: $primary-accent;
+      }
+    }
+  }
+
+  &__link-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.889rem;
+    color: $primary-accent;
+    transform: translateY(25%);
+  }
+
+  &__social-item {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+
+  &__social-icon {
+    width: 1.667rem;
+    height: 1.667rem;
+  }
+
+  &__map {
+    flex: 1 0 auto;
+  }
+
+  @include respond(max-xl) {
+    &__col {
+      flex-basis: 40%;
+    }
+  }
+
+  @include respond(max-lg) {
+    &__col {
+      flex-basis: 43%;
+    }
+  }
+
+  @include respond(max-md) {
+    &__col {
+      flex-basis: 50%;
+    }
+  }
+
+  @include respond(max-sm) {
+    &__row {
+      flex-wrap: wrap-reverse
+    }
+
+    &__col {
+      flex-basis: 100%;
+      padding: 5rem 0;
+    }
+
+    &__contacts {
+      align-items: center;
+    }
+
+    &__address {
+      max-width: 500px;
+      margin-bottom: 3rem;
+    }
+
+    &__list {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 0 1 auto;
+    }
+
+    &__map {
+      flex-basis: 100%;
+      height: 400px;
+    }
+  }
+
+  @include respond(max-xs) {
+    &__address {
+      max-width: 320px;
+    }
+    &__map {
+      height: 300px;
+    }
+  }
+}
