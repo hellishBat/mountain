@@ -34,7 +34,7 @@
     }
 
     &--human {
-      top: -10%;
+      top: -5%;
       height: 100%;
     }
   }
@@ -46,22 +46,33 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-
     &--snow {
       background-position: left 30% top 50%;
+    }
+  }
+
+  @include respond(max-xl) {
+    &__scene {
+      &--human {
+        top: 0;
+      }
+
+      &--mountains {
+        top: 46.5%;
+      }
     }
   }
 
   @include respond(max-lg) {
     &__scene {
       &--human {
-        top: 17%;
+        top: 10%;
       }
     }
 
     &__scene-img {
       &--human {
-        background-position: right 20% top 0%;
+        background-position: right 27% top 0%;
       }
     }
   }

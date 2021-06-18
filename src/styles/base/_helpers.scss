@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  // overflow-x: hidden;
 }
 
 .page {
@@ -128,7 +127,7 @@
     font-size: 2.8rem;
   }
 
-  @include respond(max-sm) {
+  @include respond(max-xs) {
     font-size: 2.5rem;
   }
 }

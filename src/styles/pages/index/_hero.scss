@@ -55,7 +55,7 @@
     position: relative;
     z-index: 2;
     width: 100%;
-    max-width: 37.5rem;
+    max-width: 54%;
   }
 
   &__content {
@@ -71,9 +71,19 @@
     color: $white;
   }
 
-  @include respond(max-lg) {
+  @include respond(max-xl) {
+    &__container {
+      padding-top: 8rem;
+    }
+
     &__title {
       font-size: 11rem;
+    }
+  }
+
+  @include respond(max-lg) {
+    &__title {
+      font-size: 10.5rem;
     }
   }
 
@@ -134,6 +144,10 @@
   }
 
   @include respond(max-xs) {
+    &__container {
+      padding-top: 4rem;
+    }
+
     &__caption {
       font-size: 1.05rem;
     }

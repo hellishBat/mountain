@@ -94,7 +94,7 @@
 
   @include respond(max-sm) {
     &__row {
-      flex-wrap: wrap-reverse
+      flex-wrap: wrap-reverse;
     }
 
     &__col {

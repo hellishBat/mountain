@@ -16,13 +16,13 @@
   white-space: nowrap;
   transition: all 0.3s $transition-style 0s;
 
+  &--lg {
+    padding: 1.167em 2.528em;
+  }
+
   &--sm {
     padding: 1.2em 1.5em 1.15em;
     font-size: 0.833rem;
-  }
-
-  &--lg {
-    padding: 1.167em 2.528em;
   }
 
   @include respond(min-md) {
@@ -38,9 +38,5 @@
     &:active {
       box-shadow: inset 0px 3px 4px rgba($black, 0.15);
     }
-  }
-
-  @include respond(max-md) {
-    
   }
 }

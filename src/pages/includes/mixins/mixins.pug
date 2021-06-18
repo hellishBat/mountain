@@ -1,8 +1,8 @@
 //- Offers card
 mixin offers_card(offer_img, offer_caption, offers_title, offer_link, offer_price)
-  .offer__card
+  .offer__card(data-aos="flip-left")
     .offer__body.d-f.fd-c.ai-c
-      .offer__img(style= offer_img data-aos='zoom-in' data-aos-delay='0')
+      .offer__img(style= offer_img)
       .offer__caption.item-caption= offer_caption
       h3.offer__card-title.item-title= offers_title
       a.offer__card__btn.btn.btn--sm(href= offer_link)
@@ -13,7 +13,7 @@ mixin offers_card(offer_img, offer_caption, offers_title, offer_link, offer_pric
 //- Crew item
 mixin crew_item(crew_link, crew_img, crew_img_alt, crew_position, crew_name)
   a.crew__item.d-f.fd-c.ai-c(href= crew_link) 
-    .crew__pic.avatar(data-aos='zoom-in' data-aos-delay='0')
+    .crew__pic.avatar(data-aos='zoom-in')
       img.crew__img(src= crew_img, alt= crew_img_alt)
     .crew__position.item-caption= crew_position 
     h3.crew__name.item-title= crew_name
