@@ -231,27 +231,27 @@ const fontStyle = (done) => {
 const images = () => {
   return src(path.images.src)
     .pipe(newer(path.images.dist))
-    .pipe(imagemin([
-      imagemin.gifsicle({
-        interlaced: true
-      }),
-      imagemin.mozjpeg({
-        quality: 75,
-        progressive: true
-      }),
-      imagemin.optipng({
-        optimizationLevel: 5
-      }),
-      imagemin.svgo({
-        plugins: [{
-            removeViewBox: false
-          },
-          {
-            cleanupIDs: false
-          }
-        ]
-      })
-    ]))
+    .pipe(imagemin({
+        interlaced: true,
+        progressive: true,
+        optimizationLevel: 5,
+      },
+      [
+        recompress({
+          loops: 6,
+          min: 50,
+          max: 90,
+          quality: 'high',
+          use: [pngquant({
+            quality: [0.8, 1],
+            strip: true,
+            speed: 1
+          })],
+        }),
+        imagemin.gifsicle(),
+        imagemin.optipng(),
+        imagemin.svgo()
+      ], ), )
     .pipe(dest(path.images.dist))
 }
 
