@@ -26,6 +26,8 @@ const webpackConfig = require('./webpack.config.js');
 const ttf2woff = require('gulp-ttf2woff');
 const ttf2woff2 = require('gulp-ttf2woff2');
 const imagemin = require('gulp-imagemin');
+const recompress = require('imagemin-jpeg-recompress');
+const pngquant = require('imagemin-pngquant');
 const svgSprite = require('gulp-svg-sprite');
 const yargs = require('yargs');
 const gulpif = require('gulp-if');
@@ -52,7 +54,7 @@ const path = {
   },
   resources: {
     src: './src/resources/**',
-    dist: './dist/resources',
+    dist: './dist',
     watch: './src/resources/**',
   },
   fonts: {

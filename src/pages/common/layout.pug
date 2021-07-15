@@ -6,7 +6,7 @@ html(lang="en")
       meta(http-equiv="X-UA-Compatible" content="IE=edge")
       meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
       title MOUNTAIN - Ski & Snowboard School
-      link(rel="icon" type="image/svg+xml" href="/resources/favicon/favicon.svg")
+      link(rel="icon" type="image/svg+xml" href="favicon/favicon.svg")
       link(rel="stylesheet" href="styles/main.css")
   body
     .wrapper
@@ -17,7 +17,6 @@ html(lang="en")
         block footer
           include footer
         block scripts
-          //- script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA9NSiiLuA3LV0ZWxGO_iTjMl6S6FHHg2Y&callback=initMap&libraries=&v=weekly' async='')
-          script(src="js/vendor.js" defer)
+          script(src="js/vendors.js" defer)
           script(src="js/main.js" defer)
 
