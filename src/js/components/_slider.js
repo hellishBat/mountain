@@ -1,6 +1,4 @@
 // Slider
-"use strict"
-
 import Swiper, {
   Pagination,
   Keyboard,

@@ -1,6 +1,4 @@
 // Contacts map
-"use strict"
-
 import {
   Loader
 } from "@googlemaps/js-api-loader";

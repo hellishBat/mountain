@@ -1,17 +1,16 @@
 // Parallax
-"use strict"
-
 // Waiting for content loaded
 export default window.onload = () => {
-  const parallax = document.querySelector('.parallax');
+  const parallax = document.querySelector(".parallax");
 
   if (parallax) {
-    const contentHeader = document.querySelector('.parallax__header');
-    const contentText = document.querySelector('.parallax__content-wrapper');
-
-    const mountains = document.querySelector('.images-parallax__scene--mountains');
-    const snow = document.querySelector('.images-parallax__scene--snow');
-    const human = document.querySelector('.images-parallax__scene--human');
+    const contentHeader = document.querySelector(".parallax__header");
+    const contentText = document.querySelector(".parallax__content-wrapper");
+    const mountains = document.querySelector(
+      ".images-parallax__scene--mountains"
+    );
+    const snow = document.querySelector(".images-parallax__scene--snow");
+    const human = document.querySelector(".images-parallax__scene--human");
 
     // Coefficients
     const forMountains = 32;
@@ -30,17 +29,22 @@ export default window.onload = () => {
     const setMouseParallaxStyle = () => {
       const distX = coordXprocent - positionX;
       const distY = coordYprocent - positionY;
-
-      positionX = positionX + (distX * speed);
-      positionY = positionY + (distY * speed);
+      positionX = positionX + distX * speed;
+      positionY = positionY + distY * speed;
 
       // Setting styles
-      mountains.style.cssText = `transform: translate(${positionX / forMountains}%,${positionY / forMountains}%);`;
-      snow.style.cssText = `transform: translate(${positionX / forSnow}%,${positionY / forSnow}%);`;
-      human.style.cssText = `transform: translate(${positionX / forHuman}%,${positionY / forHuman}%);`;
+      mountains.style.cssText = `transform: translate(${
+        positionX / forMountains
+      }%,${positionY / forMountains}%);`;
+      snow.style.cssText = `transform: translate(${positionX / forSnow}%,${
+        positionY / forSnow
+      }%);`;
+      human.style.cssText = `transform: translate(${positionX / forHuman}%,${
+        positionY / forHuman
+      }%);`;
 
       requestAnimationFrame(setMouseParallaxStyle);
-    }
+    };
     setMouseParallaxStyle();
 
     parallax.addEventListener("mousemove", (e) => {
@@ -53,8 +57,8 @@ export default window.onload = () => {
       const coordY = e.pageY - parallaxHeight / 2;
 
       // Getting percents
-      coordXprocent = coordX / parallaxWidth * 100;
-      coordYprocent = coordY / parallaxHeight * 100;
+      coordXprocent = (coordX / parallaxWidth) * 100;
+      coordYprocent = (coordY / parallaxHeight) * 100;
     });
 
     // Parallax on scroll
@@ -63,21 +67,32 @@ export default window.onload = () => {
       thresholdSets.push(i);
     }
     const callback = (entries, observer) => {
-      const scrollTopPercent = window.pageYOffset / parallax.offsetHeight * 100;
+      const scrollTopPercent =
+        (window.pageYOffset / parallax.offsetHeight) * 100;
       setParallaxItemsStyle(scrollTopPercent);
     };
     const observer = new IntersectionObserver(callback, {
-      threshold: thresholdSets
+      threshold: thresholdSets,
     });
 
-    observer.observe(document.querySelector('.content'));
+    observer.observe(document.querySelector(".content"));
 
     const setParallaxItemsStyle = (scrollTopPercent) => {
-      contentHeader.style.cssText = `transform: translate(0%,-${scrollTopPercent / 20}%);`;
-      contentText.style.cssText = `transform: translate(0%,-${scrollTopPercent / 20}%);`;
-      mountains.parentElement.style.cssText = `transform: translate(0%,-${scrollTopPercent / 15}%);`;
-      snow.parentElement.style.cssText = `transform: translate(0%,-${scrollTopPercent / 10}%);`;
-      human.parentElement.style.cssText = `transform: translate(0%,-${scrollTopPercent / 5}%);`;
-    }
+      contentHeader.style.cssText = `transform: translate(0%,-${
+        scrollTopPercent / 20
+      }%);`;
+      contentText.style.cssText = `transform: translate(0%,-${
+        scrollTopPercent / 20
+      }%);`;
+      mountains.parentElement.style.cssText = `transform: translate(0%,-${
+        scrollTopPercent / 15
+      }%);`;
+      snow.parentElement.style.cssText = `transform: translate(0%,-${
+        scrollTopPercent / 10
+      }%);`;
+      human.parentElement.style.cssText = `transform: translate(0%,-${
+        scrollTopPercent / 5
+      }%);`;
+    };
   }
-}
+};

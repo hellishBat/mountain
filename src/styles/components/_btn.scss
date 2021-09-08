@@ -10,11 +10,12 @@
   text-align: center;
   line-height: 1;
   text-transform: uppercase;
+  white-space: nowrap;
   color: $secondary-white;
+  transition: all 0.3s $transition-style 0s;
   outline: transparent;
   cursor: pointer;
-  white-space: nowrap;
-  transition: all 0.3s $transition-style 0s;
+  user-select: none;
 
   &--lg {
     padding: 1.167em 2.528em;

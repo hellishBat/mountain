@@ -1,6 +1,4 @@
 // Gallery
-"use strict"
-
 import baguetteBox from 'baguettebox.js';
 
 export const galleryBox = baguetteBox.run('.js-gallery', {
